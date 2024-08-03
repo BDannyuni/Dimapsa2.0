@@ -7,7 +7,7 @@ const projectDescription = document.getElementById('project-description');
 const projects = [
     {
         title: "Proyecto 1",
-        description: "En este Proyecto lo que hicimos fue una reparación a toda la parte superior de no sé jajaja Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aperiam deleniti autem, incidunt, earum officia quidem repudiandae nesciunt sed dolorem illo quaerat ex consectetur, libero nemo? Hic facilis libero accusamus."
+        description: "En este Proyecto lo que hicimos fue una reparación a toda la parte .... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aperiam deleniti autem, incidunt, earum officia quidem repudiandae nesciunt sed dolorem illo quaerat ex consectetur, libero nemo? Hic facilis libero accusamus."
     },
     {
         title: "Proyecto 2",
