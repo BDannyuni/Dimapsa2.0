@@ -216,19 +216,19 @@ body {
     margin-bottom: 40px;
 }
 
-.cards {
+.maquinados-section .cards {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
 }
 
-.card {
+.maquinados-section .card {
     background-color: #2a2d37;
     border-radius: 10px;
     overflow: hidden;
-    flex: 1 1 calc(25% - 20px); /* Adjust width and gap */
-    max-width: 300px;
+    flex: 1 1 20%; /* Ajustar tamaño para que entren 5 en una fila */
+    max-width: 20%; /* Asegurar que los 5 cards se acomoden en una fila */
     margin: 10px;
     text-align: center;
     padding-bottom: 10px;
@@ -712,7 +712,7 @@ button.next {
     width: calc(50% - 20px);
 }
 .comercializacion-image-container.left img {
-    height: 450px; /* Ajusta la altura de la imagen izquierda */
+    height: 350px; /* Ajusta la altura de la imagen izquierda */
     object-fit: cover;
     margin-top: 60px;
 }
@@ -748,37 +748,37 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.maquinados-section {
+.otros-section {
     background-color: #1b1e26;
     color: #ffffff;
     padding: 50px 0;
     text-align: center;
 }
 
-.maquinados-section .container {
+.otros-section .container {
     max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.maquinados-section h1 {
+.otros-section h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.maquinados-section p {
+.otros-section p {
     font-size: 1.2rem;
     margin-bottom: 40px;
 }
 
-.cards {
+.otros-section .cards {
     display: flex;
     justify-content: center; /* Cambiado de space-between a center */
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.card {
+.otros-section .card {
     background-color: #2a2d37;
     border-radius: 10px;
     overflow: hidden;
@@ -791,21 +791,21 @@ body {
     padding-bottom: 10px;
 }
 
-.card-image {
+.otros-section .card-image {
     width: 100%;
     height: 200px;
     overflow: hidden;
     flex-shrink: 0; /* Para que la imagen no se reduzca */
 }
 
-.card-image img {
+.otros-section .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.card-content {
+.otros-section .card-content {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centrar verticalmente el contenido de texto */
@@ -813,12 +813,12 @@ body {
     padding: 10px;
 }
 
-.card h2 {
+.otros-section .card h2 {
     font-size: 1.5rem;
     margin: 10px 0;
 }
 
-.card p {
+.otros-section .card p {
     font-size: 1rem;
     margin: 10px;
     text-align: left;
@@ -826,16 +826,16 @@ body {
 
 /* Estilos Responsivos */
 @media (max-width: 1400px) {
-    .cards {
+    .otros-section .cards {
         justify-content: center;
     }
-    .card {
+    .otros-section .card {
         flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 600px) {
-    .card {
+    .otros-section .card {
         flex: 1 1 calc(100% - 20px);
     }
 }
