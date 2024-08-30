@@ -13,11 +13,13 @@ function showSlide(i) {
 prevButton.addEventListener('click', () => {
     index--;
     showSlide(index);
+    resetAutoSlide();
 });
 
 nextButton.addEventListener('click', () => {
     index++;
     showSlide(index);
+    resetAutoSlide();
 });
 
 // Inicia mostrando la primera slide
@@ -36,7 +38,7 @@ let slideInterval = setInterval(autoSlide, 5000);
 // Función para reiniciar el intervalo cuando el usuario navega manualmente
 function resetAutoSlide() {
     clearInterval(slideInterval);
-    slideInterval = setInterval(autoSlide, 5000);
+    slideInterval = setInterval(autoSlide, 60000);
 }
 
 

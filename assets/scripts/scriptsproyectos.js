@@ -7,7 +7,7 @@ const projectDescription = document.getElementById('project-description');
 const projects = [
     {
         title: "Trabajos Realizados",
-        description: "Mantenimiento de Naves Industriales, Diseño de Maquinas,Demolición, Reconstrucción, Obra Civil, Remodelación, Mantenimiento a Subestaciones."
+        description: "Mantenimiento de Naves Industriales, Diseño de Maquinas, Demolición, Reconstrucción, Obra Civil, Remodelación, Mantenimiento a Subestaciones."
     }
     // Agrega más proyectos aquí
 ];
@@ -19,20 +19,18 @@ function showSlide(i) {
     if (i >= slides.length) index = 0;
     if (i < 0) index = slides.length - 1;
     carouselWrapper.style.transform = `translateX(-${index * 100}%)`;
-
-    // Actualizar el contenido de la .text-container
-    projectTitle.textContent = projects[index].title;
-    projectDescription.textContent = projects[index].description;
 }
 
 prevButton.addEventListener('click', () => {
     index--;
     showSlide(index);
+    resetAutoSlide();
 });
 
 nextButton.addEventListener('click', () => {
     index++;
     showSlide(index);
+    resetAutoSlide();
 });
 
 // Inicia mostrando la primera slide
@@ -46,10 +44,11 @@ function autoSlide() {
 }
 
 // Configura el intervalo para cambiar de slide automáticamente cada 5 segundos
-let slideInterval = setInterval(autoSlide, 8000);
+let slideInterval = setInterval(autoSlide, 5000);
 
 // Función para reiniciar el intervalo cuando el usuario navega manualmente
 function resetAutoSlide() {
     clearInterval(slideInterval);
-    slideInterval = setInterval(autoSlide, 9000);
+    slideInterval = setInterval(autoSlide, 60000);
 }
+
