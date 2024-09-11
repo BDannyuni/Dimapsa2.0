@@ -188,6 +188,7 @@ body {
     }
 }
 
+/* Estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -219,7 +220,7 @@ body {
 .maquinados-section .cards {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* No permite que los cards se muevan a la siguiente línea */
     gap: 20px;
 }
 
@@ -227,8 +228,7 @@ body {
     background-color: #2a2d37;
     border-radius: 10px;
     overflow: hidden;
-    flex: 1 1 20%; /* Ajustar tamaño para que entren 5 en una fila */
-    max-width: 20%; /* Asegurar que los 5 cards se acomoden en una fila */
+    width: calc(20% - 20px); /* Ajusta para que los 5 cards ocupen todo el ancho */
     margin: 10px;
     text-align: center;
     padding-bottom: 10px;
@@ -258,21 +258,34 @@ body {
     text-align: left;
 }
 
-/* Responsive Styles */
+/* Estilos Responsivos */
+/* Para pantallas medianas como tablets */
 @media (max-width: 1400px) {
-    .cards {
+    .maquinados-section .cards {
         justify-content: center;
+        flex-wrap: wrap; /* Permite que los cards se muevan a la siguiente línea */
     }
-    .card {
-        flex: 1 1 calc(50% - 20px);
+    .maquinados-section .card {
+        width: calc(50% - 20px); /* Mostrar 2 cards por fila en pantallas medianas */
     }
 }
 
+/* Para pantallas pequeñas como celulares */
 @media (max-width: 600px) {
-    .card {
-        flex: 1 1 calc(100% - 20px);
+    .maquinados-section .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .maquinados-section .card {
+        width: calc(100% - 20px); /* Mostrar 1 card por fila en pantallas pequeñas */
+        margin: 10px auto;
+    }
+
+    .card-image {
+        height: 250px; /* Ajustar la altura de las imágenes en pantallas pequeñas */
     }
 }
+
 
 
 /* Estilos para la sección de suministros */
@@ -414,6 +427,7 @@ body {
 }
 
 
+
 .mantenimiento-section {
     background-color: #f8f8f8;
     padding: 50px 0;
@@ -507,7 +521,13 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1368px) {
+    .mantenimiento-container h1 {
+        font-size: 1.5em; /* Aumentar el tamaño del título */
+    }
+    .mantenimiento-card h2 {
+        font-size: 0.5em;
+    }
     .mantenimiento-cards {
         grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
     }
@@ -538,7 +558,6 @@ body {
         font-size: 14px; /* Reducir el tamaño de la fuente en pantallas muy pequeñas */
     }
 }
-
 
 * {
     margin: 0;
